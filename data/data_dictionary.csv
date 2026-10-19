@@ -1,0 +1,29 @@
+column,description,kind
+post_id,Generated ID (SC00001...) in raw-file order,id
+source_row,Row number in the raw Excel sheet,id
+post_date,Date the post was published,date
+month_start / month_label,First day of the month and its readable label,date
+quarter / week_start,Calendar quarter and the Monday of the post's week,date
+weekday / weekday_num / is_weekend,"Day name (ordered Monday to Sunday), 1 to 7, and weekend flag",date
+month_days_covered / is_partial_month,"Days with data in the month, and whether the export covers only part of it",quality
+post_type,"Image, Reel, Story or Video",category
+campaign_type,"Tutorial, Giveaway, Festive Offer, Product Launch or Influencer Collab",category
+audience_emotion,Dominant audience emotion tag,category
+engagement_source,"Organic, Paid, Collab or Influencer",category
+hashtags / hashtag_combo / hashtag_count,"Raw tag string, normalised sorted combination, and number of tags (1 to 3)",category
+tag_*,One True/False flag per hashtag,flag
+impressions / reach,Total views and unique accounts reached,count
+likes / comments / shares / saves,Interaction counts,count
+profile_visits / follows,Visits to the profile and new follows attributed to the post,count
+total_interactions,likes + comments + shares + saves,derived
+engagement_rate,total_interactions / reach x 100,derived
+engagement_rate_impr,total_interactions / impressions x 100,derived
+reach_rate / frequency,"reach / impressions x 100, and impressions / reach",derived
+like_rate / comment_rate / share_rate / save_rate,Each interaction as a percent of reach,derived
+profile_visit_rate,profile_visits / reach x 100,derived
+follow_rate,follows / profile_visits x 100 (follows per profile visit),derived
+follows_per_1k_reach,follows / reach x 1000,derived
+high_intent_share,(shares + saves) / total_interactions x 100,derived
+reach_band,"Quintile of reach: Lowest 20%, Low, Middle, High, Highest 20%",derived
+hidden_gem,True if engagement rate is in the top 25% and reach in the bottom 25% (fixed thresholds),derived
+post_label,"Format | Campaign | Date, used in place of the missing caption",derived

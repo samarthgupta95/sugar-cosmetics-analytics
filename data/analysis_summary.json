@@ -1,0 +1,36 @@
+{
+  "rows": 50000,
+  "date_min": "2024-04-19",
+  "date_max": "2025-04-19",
+  "partial_months": [
+    "2024-04-01",
+    "2025-04-01"
+  ],
+  "engagement_rate_definition": "(likes + comments + shares + saves) / reach * 100",
+  "hidden_gem_rule": {
+    "engagement_rate_min": 24.642,
+    "reach_max": 10157
+  },
+  "signal_tests": {
+    "count": 48,
+    "bonferroni_threshold": 0.001042,
+    "smallest_p": 0.0027,
+    "below_raw_0_05": 7,
+    "below_bonferroni": 0,
+    "largest_epsilon_sq": 0.000439
+  },
+  "model_check": {
+    "Engagement rate": {
+      "r2_mean": -0.0004,
+      "r2_std": 0.0002
+    },
+    "Reach": {
+      "r2_mean": -0.0001,
+      "r2_std": 0.0002
+    },
+    "Follow rate": {
+      "r2_mean": -0.0001,
+      "r2_std": 0.0002
+    }
+  }
+}
